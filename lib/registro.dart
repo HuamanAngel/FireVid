@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'mapa.dart';
+//import 'mapa.dart';
 import 'login.dart';
-import 'registro.dart';
-import 'listaDesin.dart';
+//import 'registro.dart';
+//import 'listaDesin.dart';
 
 class RegisterUser extends StatelessWidget {
   @override
