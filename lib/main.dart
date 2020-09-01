@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'mapa.dart';
-import 'login.dart';
-import 'registro.dart';
 import 'listaDesin.dart';
+import 'mapa.dart';
+//import 'login.dart';
+import 'registro.dart';
+import 'cabeceraNav.dart';
 
 void main() => runApp(MaterialApp(home: Home()));
 
@@ -10,47 +11,7 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.blue,
-        title: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: <Widget>[
-            IconButton(
-              onPressed: () {
-                print("vacas");
-              },
-              icon: Icon(Icons.menu),
-            ),
-            Text("FireVid"),
-
-            Expanded(
-              child: Container(),
-            ),
-
-            IconButton(
-              onPressed: () {
-                print("kha");
-              },
-              icon: Icon(Icons.account_circle),
-            ),
-            //Boton Iniciar
-            RaisedButton(
-              color: Colors.blue,
-              child: Text(
-                "Sesion",
-                style: TextStyle(
-                  fontSize: 20.0,
-                ),
-              ),
-              elevation: 0.0,
-              onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => LoginUser()));
-              },
-            ),
-          ],
-        ),
-      ),
+      appBar: CabeceraNavInitial(context),
       body: Column(
         children: <Widget>[
           Row(
@@ -98,27 +59,3 @@ class Home extends StatelessWidget {
     );
   }
 }
-
-/*
-class Home extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("titulo"),
-        centerTitle: true,
-        backgroundColor: Colors.pink[300],
-      ),
-      body: Center(child: Icon(Icons.arrow_drop_down)),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          Navigator.push(
-              context, MaterialPageRoute(builder: (context) => Segunda()));
-        },
-        child: Text("presioname"),
-        backgroundColor: Colors.amberAccent[200],
-      ),
-    );
-  }
-}
-*/
