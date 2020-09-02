@@ -11,6 +11,8 @@ class ListaDesinfector extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: CabeceraNavInitial(context),
+      drawer: LateralMenu(),
+
       //Aca pon tu codigo
       //No edites el appBar en lo que puedas
 

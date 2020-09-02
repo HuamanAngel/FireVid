@@ -7,11 +7,20 @@ import 'cabeceraNav.dart';
 
 void main() => runApp(MaterialApp(home: Home()));
 
-class Home extends StatelessWidget {
+class Home extends StatefulWidget {
+  @override
+  _HomeState createState() => _HomeState();
+}
+
+class _HomeState extends State<Home> {
+  int valor = 0;
+  List<String> textos1 = ['hola', 'mundo', 'como'];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: CabeceraNavInitial(context),
+      drawer: LateralMenu(),
       body: Column(
         children: <Widget>[
           Row(
@@ -53,6 +62,26 @@ class Home extends StatelessWidget {
                 child: Text("Desinfec"),
               ),
             ],
+          ),
+          Row(mainAxisAlignment: MainAxisAlignment.center, children: <Widget>[
+            Text('${textos1.elementAt(valor)}'),
+            RaisedButton(
+              onPressed: () {
+                setState(() {
+                  if (valor >= 2) {
+                    valor = -1;
+                  }
+
+                  valor++;
+                  print(textos1.elementAt(valor));
+                });
+              },
+              child: Text('Cambio'),
+            ),
+          ]),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: textos1.map((texto) => Text(texto)).toList(),
           ),
         ],
       ),
