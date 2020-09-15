@@ -4,7 +4,6 @@ import 'mapa.dart';
 //import 'login.dart';
 import 'registro.dart';
 import 'cabeceraNav.dart';
-
 void main() => runApp(MaterialApp(home: Home()));
 
 class Home extends StatefulWidget {
