@@ -1,3 +1,4 @@
+import 'package:firevid/negociacion.dart';
 import 'package:flutter/material.dart';
 import 'cabeceraNav.dart';
 
@@ -132,7 +133,10 @@ class ListaDesinfector extends StatelessWidget {
 
                   onPressed: () {
 
-                    Navigator.pop(context);
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => Neg1()));
                   },
                   child: Text("1",style: TextStyle(
                     color: Colors.black,fontSize: MediaQuery.of(context).size.width * 0.03,)),

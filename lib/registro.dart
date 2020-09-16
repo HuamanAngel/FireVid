@@ -1,5 +1,4 @@
 import 'package:firevid/login.dart';
-import 'package:firevid/negociacion.dart';
 import 'package:flutter/material.dart';
 //import 'mapa.dart';
 //import 'login.dart';
