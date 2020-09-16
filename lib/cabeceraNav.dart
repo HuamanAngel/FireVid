@@ -22,6 +22,7 @@ class CabeceraNavInitial extends AppBar {
 
               Expanded(
                 child: Container(),
+
               ),
 
               IconButton(
